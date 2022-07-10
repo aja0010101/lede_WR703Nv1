@@ -20,6 +20,8 @@ sed -i -e '2s/$/^ff4b0f6/g' feeds.conf.default
 sed -i -e '3s/$/^e352557/g' feeds.conf.default
 sed -i -e '4s/$/^02d5dc5/g' feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld.git^0b25484' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
 ./scripts/feeds update -a -f
 ./scripts/feeds install -a -f
